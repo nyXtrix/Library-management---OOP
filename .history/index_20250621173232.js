@@ -105,7 +105,7 @@ class Book {
 
   getDetails() {
     console.log(
-      `Book: ${this.title} by ${this.author}, (ISBN: ${this.id}), ${this.availableQuantity}/${this.quantity} available`
+      `${this.title} by ${this.author}, (ISBN: ${this.id}), ${this.availableQuantity}/${this.quantity} available`
     );
   }
 }
@@ -124,7 +124,7 @@ class Library {
       this.books.push(book);
       console.log(`Book: ${book.title} by ${book.author} is added succesfully`);
     } else {
-      console.log(`Book: ${book.title} by ${book.author} is already added`);
+      console.log(`B${book.title} by ${book.author} is already added`);
     }
   }
 
@@ -162,30 +162,30 @@ class Library {
 
   listAllBooks() {
     console.log("Books in Library: ");
-    if (this.books.length > 0) {
-      this.books.forEach((book) => book.getDetails());
-    } else {
+    if (this.books.length === 0) {
       console.log("No books in library");
+    } else {
+      this.books.forEach((book) => book.getDetails());
     }
   }
 
   listAllMembers() {
     console.log("Regitered Members are: ");
 
-    if (this.members.length > 0) {
-      this.members.forEach((member) => member.getDetails());
-    } else {
+    if (this.members.length === 0) {
       console.log("No members registered");
+    } else {
+      this.members.forEach((member) => member.getDetails());
     }
   }
 
   listAllLibrarians() {
     console.log("This library librarian are:");
 
-    if (this.libraians.length > 0) {
-      this.libraians.forEach((librarian) => librarian.getDetails());
-    } else {
+    if (this.libraians.length === 0) {
       console.log("No librarians are found");
+    } else {
+      this.libraians.forEach((librarian) => librarian.getDetails());
     }
   }
 
@@ -214,6 +214,7 @@ l1.addMember(m2, lib);
 l1.assignBook("101", m1, lib);
 l1.assignBook("102", m2, lib);
 l1.assignBook("101", m2, lib);
+l1.assignBook("101", m1, lib);
 
 l1.returnAccept("101", m1, lib);
 

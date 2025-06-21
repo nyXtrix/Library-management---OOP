@@ -172,9 +172,10 @@ class Library {
   listAllMembers() {
     console.log("Regitered Members are: ");
 
-    if (this.members.length > 0) {
+    if (this.members.length>0) {
       this.members.forEach((member) => member.getDetails());
     } else {
+      
       console.log("No members registered");
     }
   }
@@ -182,9 +183,10 @@ class Library {
   listAllLibrarians() {
     console.log("This library librarian are:");
 
-    if (this.libraians.length > 0) {
-      this.libraians.forEach((librarian) => librarian.getDetails());
+    if (this.libraians.length>0) {
+      
     } else {
+      this.libraians.forEach((librarian) => librarian.getDetails());
       console.log("No librarians are found");
     }
   }

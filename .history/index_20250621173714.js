@@ -172,20 +172,20 @@ class Library {
   listAllMembers() {
     console.log("Regitered Members are: ");
 
-    if (this.members.length > 0) {
-      this.members.forEach((member) => member.getDetails());
+    if (this.members.length>0) {
+      c
     } else {
-      console.log("No members registered");
+      this.members.forEach((member) => member.getDetails());
     }
   }
 
   listAllLibrarians() {
     console.log("This library librarian are:");
 
-    if (this.libraians.length > 0) {
-      this.libraians.forEach((librarian) => librarian.getDetails());
-    } else {
+    if (this.libraians.length === 0) {
       console.log("No librarians are found");
+    } else {
+      this.libraians.forEach((librarian) => librarian.getDetails());
     }
   }
 
